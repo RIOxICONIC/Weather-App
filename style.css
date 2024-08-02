@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    height: 70%;
+    width: 28%;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgb(255, 255, 255, .2);
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.searchbox{
+    position: relative;
+    width: 85%;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid rgb(255, 255, 255, .2);
+    border-radius: 10px;
+    z-index: 10;
+}
+.searchbox input{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255, .8);
+    font-size: 18px;
+    outline: none;
+    /* This Ensures That Padding Is Not Included In Element Width */
+    box-sizing: border-box; 
+    padding-left: 15%;
+}
+.searchbox .ri-map-pin-2-fill{
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: 5%;
+    top: 20%;
+}
+.searchbox .ri-search-line{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    transition: .3s all;
+}
+.searchbox .ri-search-line:hover{
+    color: rgb(255, 255, 255, .8);
+}
+
+.displayInfo{
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    width: 70%;
+    height: 60%;
+}
+.displayInfo img{
+    height: 50%;
+}
+.displayInfo h1{
+    font-size: 60px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.displayInfo h1 sup{
+    font-size: 25px;
+    font-family: monospace;
+}
+.displayInfo h2{
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.errorLocationNotFound img{
+    height: 80%;
+    margin-top: 20px;
+}
+.errorLocationNotFound h1{
+    display: none;
+}
+.errorLocationNotFound h2{
+    margin-top: 20px;
+    width: max-content;
+}
+
+.displayDetails{
+    display: none;
+    width: 90%;
+    margin-top: 10px;
+    justify-content: space-around;
+    color: rgb(255, 255, 255, .8);
+}
+.displayDetails i{
+    font-size: 40px;
+    margin-right: 5px;
+    color: white;
+}
+.displayDetails .humidity{
+    display: flex;
+}
+.humidity h1{
+    font-size: 20px;
+}
+.humidity h2{
+    font-size: 15px;
+}
+.displayDetails .windSpeed{
+    display: flex;
+}
+.windSpeed h1{
+    font-size: 20px;
+}
+.windSpeed h2{
+    font-size: 15px;
+}
